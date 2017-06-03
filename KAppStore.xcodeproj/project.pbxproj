@@ -7,25 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BDD481CA1EE24893000D5C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD481C91EE24893000D5C12 /* AppDelegate.swift */; };
-		BDD481CC1EE24893000D5C12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD481CB1EE24893000D5C12 /* ViewController.swift */; };
-		BDD481CF1EE24893000D5C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD481CD1EE24893000D5C12 /* Main.storyboard */; };
-		BDD481D11EE24893000D5C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD481D01EE24893000D5C12 /* Assets.xcassets */; };
-		BDD481D41EE24893000D5C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD481D21EE24893000D5C12 /* LaunchScreen.storyboard */; };
-		BDD481DE1EE2A479000D5C12 /* appList.json in Resources */ = {isa = PBXBuildFile; fileRef = BDD481DD1EE2A479000D5C12 /* appList.json */; };
-		BDD481E01EE2A62F000D5C12 /* 1.txt in Resources */ = {isa = PBXBuildFile; fileRef = BDD481DF1EE2A62F000D5C12 /* 1.txt */; };
+		BDD481F11EE2A770000D5C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD481E51EE2A770000D5C12 /* Assets.xcassets */; };
+		BDD481F21EE2A770000D5C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD481E61EE2A770000D5C12 /* LaunchScreen.storyboard */; };
+		BDD481F31EE2A770000D5C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD481E81EE2A770000D5C12 /* Main.storyboard */; };
+		BDD481F41EE2A770000D5C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD481EB1EE2A770000D5C12 /* AppDelegate.swift */; };
+		BDD481F51EE2A770000D5C12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD481EC1EE2A770000D5C12 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BDD481C61EE24893000D5C12 /* KAppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDD481C91EE24893000D5C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BDD481CB1EE24893000D5C12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BDD481CE1EE24893000D5C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BDD481D01EE24893000D5C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BDD481D31EE24893000D5C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BDD481D51EE24893000D5C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BDD481DD1EE2A479000D5C12 /* appList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appList.json; sourceTree = "<group>"; };
-		BDD481DF1EE2A62F000D5C12 /* 1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1.txt; sourceTree = "<group>"; };
+		BDD481E31EE2A770000D5C12 /* 1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1.txt; sourceTree = "<group>"; };
+		BDD481E41EE2A770000D5C12 /* appList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appList.json; sourceTree = "<group>"; };
+		BDD481E51EE2A770000D5C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDD481E71EE2A770000D5C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BDD481E91EE2A770000D5C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BDD481EB1EE2A770000D5C12 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BDD481EC1EE2A770000D5C12 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BDD481EE1EE2A770000D5C12 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +40,7 @@
 		BDD481BD1EE24893000D5C12 = {
 			isa = PBXGroup;
 			children = (
-				BDD481C81EE24893000D5C12 /* KAppStore */,
+				BDD481E11EE2A770000D5C12 /* KAppStore */,
 				BDD481C71EE24893000D5C12 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,19 +53,43 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BDD481C81EE24893000D5C12 /* KAppStore */ = {
+		BDD481E11EE2A770000D5C12 /* KAppStore */ = {
 			isa = PBXGroup;
 			children = (
-				BDD481DF1EE2A62F000D5C12 /* 1.txt */,
-				BDD481DD1EE2A479000D5C12 /* appList.json */,
-				BDD481C91EE24893000D5C12 /* AppDelegate.swift */,
-				BDD481CB1EE24893000D5C12 /* ViewController.swift */,
-				BDD481CD1EE24893000D5C12 /* Main.storyboard */,
-				BDD481D01EE24893000D5C12 /* Assets.xcassets */,
-				BDD481D21EE24893000D5C12 /* LaunchScreen.storyboard */,
-				BDD481D51EE24893000D5C12 /* Info.plist */,
+				BDD481EA1EE2A770000D5C12 /* Sources */,
+				BDD481E21EE2A770000D5C12 /* Resources */,
+				BDD481ED1EE2A770000D5C12 /* Supporting Files */,
 			);
 			path = KAppStore;
+			sourceTree = "<group>";
+		};
+		BDD481E21EE2A770000D5C12 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BDD481E31EE2A770000D5C12 /* 1.txt */,
+				BDD481E41EE2A770000D5C12 /* appList.json */,
+				BDD481E51EE2A770000D5C12 /* Assets.xcassets */,
+				BDD481E61EE2A770000D5C12 /* LaunchScreen.storyboard */,
+				BDD481E81EE2A770000D5C12 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BDD481EA1EE2A770000D5C12 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BDD481EB1EE2A770000D5C12 /* AppDelegate.swift */,
+				BDD481EC1EE2A770000D5C12 /* ViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BDD481ED1EE2A770000D5C12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDD481EE1EE2A770000D5C12 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,11 +151,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD481D41EE24893000D5C12 /* LaunchScreen.storyboard in Resources */,
-				BDD481E01EE2A62F000D5C12 /* 1.txt in Resources */,
-				BDD481DE1EE2A479000D5C12 /* appList.json in Resources */,
-				BDD481D11EE24893000D5C12 /* Assets.xcassets in Resources */,
-				BDD481CF1EE24893000D5C12 /* Main.storyboard in Resources */,
+				BDD481F31EE2A770000D5C12 /* Main.storyboard in Resources */,
+				BDD481F21EE2A770000D5C12 /* LaunchScreen.storyboard in Resources */,
+				BDD481F11EE2A770000D5C12 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,28 +164,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD481CC1EE24893000D5C12 /* ViewController.swift in Sources */,
-				BDD481CA1EE24893000D5C12 /* AppDelegate.swift in Sources */,
+				BDD481F51EE2A770000D5C12 /* ViewController.swift in Sources */,
+				BDD481F41EE2A770000D5C12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BDD481CD1EE24893000D5C12 /* Main.storyboard */ = {
+		BDD481E61EE2A770000D5C12 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BDD481CE1EE24893000D5C12 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BDD481D21EE24893000D5C12 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BDD481D31EE24893000D5C12 /* Base */,
+				BDD481E71EE2A770000D5C12 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BDD481E81EE2A770000D5C12 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDD481E91EE2A770000D5C12 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -266,7 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = KAppStore/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KAppStore/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aney00.KAppStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,7 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = KAppStore/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KAppStore/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aney00.KAppStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
