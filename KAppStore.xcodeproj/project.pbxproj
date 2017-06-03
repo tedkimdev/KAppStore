@@ -12,6 +12,8 @@
 		BDD481F31EE2A770000D5C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD481E81EE2A770000D5C12 /* Main.storyboard */; };
 		BDD481F41EE2A770000D5C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD481EB1EE2A770000D5C12 /* AppDelegate.swift */; };
 		BDD481F51EE2A770000D5C12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD481EC1EE2A770000D5C12 /* ViewController.swift */; };
+		BDD481F81EE2AAB5000D5C12 /* 53x53bb-85.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD481F71EE2AAB5000D5C12 /* 53x53bb-85.png */; };
+		BDD481FA1EE2E5B5000D5C12 /* AppListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD481F91EE2E5B5000D5C12 /* AppListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BDD481EB1EE2A770000D5C12 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD481EC1EE2A770000D5C12 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BDD481EE1EE2A770000D5C12 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDD481F71EE2AAB5000D5C12 /* 53x53bb-85.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53x53bb-85.png"; sourceTree = "<group>"; };
+		BDD481F91EE2E5B5000D5C12 /* AppListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				BDD481E31EE2A770000D5C12 /* 1.txt */,
+				BDD481F71EE2AAB5000D5C12 /* 53x53bb-85.png */,
 				BDD481E41EE2A770000D5C12 /* appList.json */,
 				BDD481E51EE2A770000D5C12 /* Assets.xcassets */,
 				BDD481E61EE2A770000D5C12 /* LaunchScreen.storyboard */,
@@ -80,6 +85,7 @@
 			children = (
 				BDD481EB1EE2A770000D5C12 /* AppDelegate.swift */,
 				BDD481EC1EE2A770000D5C12 /* ViewController.swift */,
+				BDD481F91EE2E5B5000D5C12 /* AppListCell.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -154,6 +160,7 @@
 				BDD481F31EE2A770000D5C12 /* Main.storyboard in Resources */,
 				BDD481F21EE2A770000D5C12 /* LaunchScreen.storyboard in Resources */,
 				BDD481F11EE2A770000D5C12 /* Assets.xcassets in Resources */,
+				BDD481F81EE2AAB5000D5C12 /* 53x53bb-85.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD481F51EE2A770000D5C12 /* ViewController.swift in Sources */,
+				BDD481FA1EE2E5B5000D5C12 /* AppListCell.swift in Sources */,
 				BDD481F41EE2A770000D5C12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

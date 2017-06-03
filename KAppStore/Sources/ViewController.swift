@@ -15,15 +15,19 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
+  
   // MARK: View Life Cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     self.navigationItem.title = "금융"
+    self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "카테고리", style: .plain, target: self, action: nil)
+    self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icon-card"), style: .plain, target: self, action: nil)
     
     self.tableView.dataSource = self
     self.tableView.delegate = self
+    
     
   }
 
@@ -47,7 +51,7 @@ extension ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
     
-    cell.backgroundColor = .gray
+    cell.backgroundColor = .white
     
     return cell
   }
