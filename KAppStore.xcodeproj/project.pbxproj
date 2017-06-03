@@ -12,6 +12,8 @@
 		BDD481CF1EE24893000D5C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD481CD1EE24893000D5C12 /* Main.storyboard */; };
 		BDD481D11EE24893000D5C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD481D01EE24893000D5C12 /* Assets.xcassets */; };
 		BDD481D41EE24893000D5C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD481D21EE24893000D5C12 /* LaunchScreen.storyboard */; };
+		BDD481DE1EE2A479000D5C12 /* appList.json in Resources */ = {isa = PBXBuildFile; fileRef = BDD481DD1EE2A479000D5C12 /* appList.json */; };
+		BDD481E01EE2A62F000D5C12 /* 1.txt in Resources */ = {isa = PBXBuildFile; fileRef = BDD481DF1EE2A62F000D5C12 /* 1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		BDD481D01EE24893000D5C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDD481D31EE24893000D5C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDD481D51EE24893000D5C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDD481DD1EE2A479000D5C12 /* appList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appList.json; sourceTree = "<group>"; };
+		BDD481DF1EE2A62F000D5C12 /* 1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		BDD481C81EE24893000D5C12 /* KAppStore */ = {
 			isa = PBXGroup;
 			children = (
+				BDD481DF1EE2A62F000D5C12 /* 1.txt */,
+				BDD481DD1EE2A479000D5C12 /* appList.json */,
 				BDD481C91EE24893000D5C12 /* AppDelegate.swift */,
 				BDD481CB1EE24893000D5C12 /* ViewController.swift */,
 				BDD481CD1EE24893000D5C12 /* Main.storyboard */,
@@ -124,6 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD481D41EE24893000D5C12 /* LaunchScreen.storyboard in Resources */,
+				BDD481E01EE2A62F000D5C12 /* 1.txt in Resources */,
+				BDD481DE1EE2A479000D5C12 /* appList.json in Resources */,
 				BDD481D11EE24893000D5C12 /* Assets.xcassets in Resources */,
 				BDD481CF1EE24893000D5C12 /* Main.storyboard in Resources */,
 			);
