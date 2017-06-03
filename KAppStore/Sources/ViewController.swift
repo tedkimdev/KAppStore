@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
   
   // MARK: UI
@@ -65,6 +65,11 @@ extension ViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     print("\(indexPath.row) selected ")
+    
+//    let appItem = self.appItems[indexPath.item]
+    guard let appDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "appDetailViewControllerId") else { return }
+    self.navigationController?.pushViewController(appDetailViewController, animated: true)
+
   }
   
 }

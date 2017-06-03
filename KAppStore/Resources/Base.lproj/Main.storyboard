@@ -72,8 +72,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UU-6E-23K">
-                                                    <rect key="frame" x="329" y="29" width="30" height="30"/>
-                                                    <state key="normal" title="받기"/>
+                                                    <rect key="frame" x="309" y="29" width="50" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="c9m-1a-83g"/>
+                                                    </constraints>
+                                                    <state key="normal" title="받기">
+                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -94,6 +99,14 @@
                                                 <constraint firstItem="lkk-s3-2Kd" firstAttribute="leading" secondItem="RGh-zM-s1r" secondAttribute="trailing" constant="8" id="xvP-lc-eqF"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="appIconView" destination="RGh-zM-s1r" id="MXy-4Q-YNC"/>
+                                            <outlet property="appNameLabel" destination="TFX-bF-bSm" id="Vw1-pE-kyh"/>
+                                            <outlet property="categoryLabel" destination="5tU-Uu-4qS" id="mdb-Tg-raH"/>
+                                            <outlet property="downloadButton" destination="4UU-6E-23K" id="QPW-vX-fU8"/>
+                                            <outlet property="numberLabel" destination="51E-D0-xb5" id="lug-nV-YCK"/>
+                                            <outlet property="reviewCountLabel" destination="Vek-Ll-3nJ" id="gO9-8r-kvz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -114,6 +127,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1688.8" y="138.98050974512745"/>
+        </scene>
+        <!--App Detail View Controller-->
+        <scene sceneID="8Og-5O-l8s">
+            <objects>
+                <collectionViewController storyboardIdentifier="appDetailViewControllerId" id="31z-hS-eZA" customClass="AppDetailViewController" customModule="KAppStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Dw7-nL-kHt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ksd-V1-frH">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Bvb-I8-thh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8dO-oA-rda">
+                                            <rect key="frame" x="8" y="8" width="122" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <size key="customSize" width="375" height="204"/>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rB0-Ws-zFd">
+                                <rect key="frame" x="163" y="214" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="31z-hS-eZA" id="h78-RC-gSm"/>
+                            <outlet property="delegate" destination="31z-hS-eZA" id="2iu-Ms-vlA"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGb-FB-T20" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2461.5999999999999" y="138.98050974512745"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="g4L-7V-6gT">
