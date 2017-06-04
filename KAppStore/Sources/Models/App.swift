@@ -18,7 +18,6 @@ struct App {
   var summary: String?
   var category: String!
   
-  var screenshots: [String]?
   var desc: String?
   var appInformation: Any?
   

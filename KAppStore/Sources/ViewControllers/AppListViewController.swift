@@ -84,7 +84,7 @@ extension AppListViewController: UITableViewDelegate {
     
     let appItem = self.apps[indexPath.row]
     guard let appDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "appDetailViewControllerId") as? AppDetailViewController else { return }
-    appDetailViewController.app = appItem
+    appDetailViewController.appId = appItem.id
     
     self.navigationController?.pushViewController(appDetailViewController, animated: true)
   }

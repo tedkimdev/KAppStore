@@ -12,9 +12,20 @@ class AppDetailViewController: UICollectionViewController {
   
   // MARK: Properties
   
-  var app: App? {
+  var appId: String? {
     didSet {
-      print(self.app)
+      guard let appId = self.appId else { return }
+      ApiService.appDetail(appId: appId) { [weak self] appDetailInfo in
+        guard let `self` = self else { return }
+        self.appDetailInfo = appDetailInfo
+      }
+    }
+  }
+  
+  var appDetailInfo: AppDetailInfo? {
+    didSet {
+      print(self.appDetailInfo ?? "no app detail info")
+      self.collectionView?.reloadData()
     }
   }
   
@@ -35,6 +46,8 @@ class AppDetailViewController: UICollectionViewController {
     
     // Register cell classes
 //    self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CellId")
+    
+    
     
   }
   

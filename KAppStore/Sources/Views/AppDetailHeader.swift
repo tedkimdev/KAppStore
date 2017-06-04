@@ -10,12 +10,16 @@ import UIKit
 
 class AppDetailHeader: UICollectionReusableView {
   
+  // MARK: Properties
+  
+  var appDetailInfo: AppDetailInfo?
+  
   
   // MARK: UI
   
   @IBOutlet weak var appImageView: UIImageView!
-  
   @IBOutlet weak var downloadButton: UIButton!
+  
   
   // MARK: - View Life Cycle
   
@@ -30,6 +34,13 @@ class AppDetailHeader: UICollectionReusableView {
     self.downloadButton.layer.borderWidth = 1
     self.downloadButton.layer.borderColor = UIColor.rgb(red: 0, green: 129, blue: 250).cgColor
     self.downloadButton.layer.cornerRadius = 5
+  }
+  
+  
+  // MARK: Configuring
+  
+  func configure(appDetailInfo: AppDetailInfo) {
+    
   }
   
 }
