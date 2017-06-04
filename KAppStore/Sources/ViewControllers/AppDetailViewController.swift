@@ -19,7 +19,7 @@ class AppDetailViewController: UICollectionViewController {
     // self.clearsSelectionOnViewWillAppear = false
     
     // Register cell classes
-    self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
+//    self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CellId")
     
   }
   
@@ -42,13 +42,13 @@ class AppDetailViewController: UICollectionViewController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 7
+    return 1
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "screenshotsCellId", for: indexPath)
     
-//    cell.backgroundColor = .blue
+    cell.backgroundColor = .white
     
     return cell
   }
@@ -61,6 +61,10 @@ class AppDetailViewController: UICollectionViewController {
 extension AppDetailViewController: UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    return CGSize(width: self.view.frame.width, height: 200)
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: self.view.frame.width, height: 200)
   }
   

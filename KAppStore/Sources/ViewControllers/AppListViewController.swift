@@ -49,7 +49,7 @@ extension AppListViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "appListCellId", for: indexPath)
     
     cell.backgroundColor = .white
     

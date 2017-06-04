@@ -10,6 +10,7 @@
 		BD195CDF1EE3AE5D0013D63F /* AppDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD195CDE1EE3AE5D0013D63F /* AppDetailHeader.swift */; };
 		BD195CE21EE3C4B80013D63F /* UIColor+rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD195CE11EE3C4B80013D63F /* UIColor+rgb.swift */; };
 		BD195CE61EE3C6DD0013D63F /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD195CE51EE3C6DD0013D63F /* LineView.swift */; };
+		BD195CE81EE3C9C20013D63F /* ScreenshotsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD195CE71EE3C9C20013D63F /* ScreenshotsCell.swift */; };
 		BDD481F11EE2A770000D5C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD481E51EE2A770000D5C12 /* Assets.xcassets */; };
 		BDD481F21EE2A770000D5C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD481E61EE2A770000D5C12 /* LaunchScreen.storyboard */; };
 		BDD481F31EE2A770000D5C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD481E81EE2A770000D5C12 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		BD195CDE1EE3AE5D0013D63F /* AppDetailHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailHeader.swift; sourceTree = "<group>"; };
 		BD195CE11EE3C4B80013D63F /* UIColor+rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+rgb.swift"; sourceTree = "<group>"; };
 		BD195CE51EE3C6DD0013D63F /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		BD195CE71EE3C9C20013D63F /* ScreenshotsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotsCell.swift; sourceTree = "<group>"; };
 		BDD481C61EE24893000D5C12 /* KAppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD481E31EE2A770000D5C12 /* 1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1.txt; sourceTree = "<group>"; };
 		BDD481E41EE2A770000D5C12 /* appList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appList.json; sourceTree = "<group>"; };
@@ -127,8 +129,8 @@
 		BDD482001EE3A4D9000D5C12 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BDD482011EE3A4D9000D5C12 /* AppDetailViewController.swift */,
 				BDD482021EE3A4D9000D5C12 /* AppListViewController.swift */,
+				BDD482011EE3A4D9000D5C12 /* AppDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -138,6 +140,7 @@
 			children = (
 				BDD482041EE3A4D9000D5C12 /* AppListCell.swift */,
 				BD195CDE1EE3AE5D0013D63F /* AppDetailHeader.swift */,
+				BD195CE71EE3C9C20013D63F /* ScreenshotsCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				BDD482071EE3A4D9000D5C12 /* AppListCell.swift in Sources */,
 				BD195CE21EE3C4B80013D63F /* UIColor+rgb.swift in Sources */,
 				BDD481F41EE2A770000D5C12 /* AppDelegate.swift in Sources */,
+				BD195CE81EE3C9C20013D63F /* ScreenshotsCell.swift in Sources */,
 				BD195CE61EE3C6DD0013D63F /* LineView.swift in Sources */,
 				BDD482051EE3A4D9000D5C12 /* AppDetailViewController.swift in Sources */,
 			);
