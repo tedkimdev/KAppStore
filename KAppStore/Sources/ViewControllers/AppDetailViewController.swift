@@ -9,7 +9,22 @@
 import UIKit
 
 class AppDetailViewController: UICollectionViewController {
-
+  
+  // MARK: Properties
+  
+  var app: App? {
+    didSet {
+      print(self.app)
+    }
+  }
+  
+  
+  // MARK: Initializing
+  
+  required init?(coder: NSCoder)  {
+    super.init(coder: coder)
+  }
+  
   // MARK: View Life Cycle
   
   override func viewDidLoad() {
@@ -42,7 +57,7 @@ class AppDetailViewController: UICollectionViewController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 1
+    return 3
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

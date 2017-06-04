@@ -82,8 +82,10 @@ extension AppListViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-//    let appItem = self.appItems[indexPath.item]
-    guard let appDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "appDetailViewControllerId") else { return }
+    let appItem = self.apps[indexPath.row]
+    guard let appDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "appDetailViewControllerId") as? AppDetailViewController else { return }
+    appDetailViewController.app = appItem
+    
     self.navigationController?.pushViewController(appDetailViewController, animated: true)
   }
   
