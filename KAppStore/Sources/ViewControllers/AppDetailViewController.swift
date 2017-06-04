@@ -12,6 +12,15 @@ class AppDetailViewController: UICollectionViewController {
   
   // MARK: Properties
   
+  fileprivate var cellTypes: CellType = CellType(
+    items:[.screenshot,
+           .content,
+           .information,
+           .selectable,
+           .artistName,
+          ]
+  )
+  
   var appId: String? {
     didSet {
       guard let appId = self.appId else { return }
@@ -36,19 +45,11 @@ class AppDetailViewController: UICollectionViewController {
     super.init(coder: coder)
   }
   
+  
   // MARK: View Life Cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = false
-    
-    // Register cell classes
-//    self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CellId")
-    
-    
-    
   }
   
   override func didReceiveMemoryWarning() {
@@ -74,19 +75,42 @@ class AppDetailViewController: UICollectionViewController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    // TODO: 셀 개수
-    return 3
+    return self.cellTypes.items.count
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "screenshotsCellId", for: indexPath) as! ScreenshotsCell
     
-    if let screenshotURLs = self.appDetailInfo?.screenshotURLs {
-//      print(screenshotURLs)
-      cell.configure(URLs: screenshotURLs)
+    switch self.cellTypes.items[indexPath.item] {
+    case .screenshot:
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "screenshotsCellId", for: indexPath) as! ScreenshotsCell
+      
+      if let screenshotURLs = self.appDetailInfo?.screenshotURLs {
+//        print(screenshotURLs)
+        cell.configure(URLs: screenshotURLs)
+      }
+      return cell
+      
+    case .content:
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contentCellId", for: indexPath)
+      cell.backgroundColor = .green
+      return cell
+      
+    case .information:
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contentCellId", for: indexPath)
+      cell.backgroundColor = .blue
+      return cell
+      
+    case .selectable:
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contentCellId", for: indexPath)
+      cell.backgroundColor = .green
+      return cell
+      
+    case .artistName:
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contentCellId", for: indexPath)
+      cell.backgroundColor = .blue
+      return cell
     }
     
-    return cell
   }
   
 }

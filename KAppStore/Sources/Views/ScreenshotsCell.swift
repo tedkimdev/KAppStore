@@ -86,6 +86,7 @@ extension ScreenshotsCell: UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     
+    //TODO: Size 함수 이미지셀 안에다 구현..
     // cell item 은 콜렉션뷰 높이 - (Section Insets top+bottom + Content Insets top + botoom)보다 작아야함.
     let height = self.frame.height - titleLabel.frame.height - 8 - 8 - 14 - 10
     let width = height * UIScreen.main.bounds.width / UIScreen.main.bounds.height

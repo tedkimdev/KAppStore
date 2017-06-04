@@ -219,7 +219,7 @@
                                     <outlet property="titleLabel" destination="XDc-QN-jtH" id="KPe-xi-OM2"/>
                                 </connections>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5AW-yH-PU0">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="contentCellId" id="5AW-yH-PU0">
                                 <rect key="frame" x="0.0" y="580" width="414" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
