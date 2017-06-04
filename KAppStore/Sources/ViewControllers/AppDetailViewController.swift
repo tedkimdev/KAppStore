@@ -24,7 +24,7 @@ class AppDetailViewController: UICollectionViewController {
   
   var appDetailInfo: AppDetailInfo? {
     didSet {
-      print(self.appDetailInfo ?? "no app detail info")
+//      print(self.appDetailInfo ?? "no app detail info")
       self.collectionView?.reloadData()
     }
   }
@@ -74,13 +74,17 @@ class AppDetailViewController: UICollectionViewController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    // TODO: 셀 개수
     return 3
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "screenshotsCellId", for: indexPath)
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "screenshotsCellId", for: indexPath) as! ScreenshotsCell
     
-    cell.backgroundColor = .white
+    if let screenshotURLs = self.appDetailInfo?.screenshotURLs {
+//      print(screenshotURLs)
+      cell.configure(URLs: screenshotURLs)
+    }
     
     return cell
   }
@@ -97,7 +101,7 @@ extension AppDetailViewController: UICollectionViewDelegateFlowLayout {
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: self.view.frame.width, height: 400)
+    return CGSize(width: self.view.frame.width, height: 360)
   }
   
 }

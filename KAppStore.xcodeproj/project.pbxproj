@@ -10,6 +10,7 @@
 		BD0F16781EE43A8E006FDF3F /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F16771EE43A8E006FDF3F /* CustomImageView.swift */; };
 		BD0F167C1EE45439006FDF3F /* AppDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F167B1EE45439006FDF3F /* AppDetailInfo.swift */; };
 		BD0F167E1EE4865A006FDF3F /* screen696x696.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BD0F167D1EE4865A006FDF3F /* screen696x696.jpeg */; };
+		BD0F16801EE4877F006FDF3F /* ScreenshotImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F167F1EE4877F006FDF3F /* ScreenshotImageCell.swift */; };
 		BD195CDF1EE3AE5D0013D63F /* AppDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD195CDE1EE3AE5D0013D63F /* AppDetailHeader.swift */; };
 		BD195CE21EE3C4B80013D63F /* UIColor+rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD195CE11EE3C4B80013D63F /* UIColor+rgb.swift */; };
 		BD195CE61EE3C6DD0013D63F /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD195CE51EE3C6DD0013D63F /* LineView.swift */; };
@@ -30,6 +31,7 @@
 		BD0F16771EE43A8E006FDF3F /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		BD0F167B1EE45439006FDF3F /* AppDetailInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailInfo.swift; sourceTree = "<group>"; };
 		BD0F167D1EE4865A006FDF3F /* screen696x696.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screen696x696.jpeg; sourceTree = "<group>"; };
+		BD0F167F1EE4877F006FDF3F /* ScreenshotImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotImageCell.swift; sourceTree = "<group>"; };
 		BD195CDE1EE3AE5D0013D63F /* AppDetailHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailHeader.swift; sourceTree = "<group>"; };
 		BD195CE11EE3C4B80013D63F /* UIColor+rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+rgb.swift"; sourceTree = "<group>"; };
 		BD195CE51EE3C6DD0013D63F /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				BDD482041EE3A4D9000D5C12 /* AppListTableViewCell.swift */,
 				BD195CDE1EE3AE5D0013D63F /* AppDetailHeader.swift */,
 				BD195CE71EE3C9C20013D63F /* ScreenshotsCell.swift */,
+				BD0F167F1EE4877F006FDF3F /* ScreenshotImageCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				BD195CDF1EE3AE5D0013D63F /* AppDetailHeader.swift in Sources */,
 				BD195CEB1EE3D9310013D63F /* ApiService.swift in Sources */,
 				BD0F167C1EE45439006FDF3F /* AppDetailInfo.swift in Sources */,
+				BD0F16801EE4877F006FDF3F /* ScreenshotImageCell.swift in Sources */,
 				BDD482061EE3A4D9000D5C12 /* AppListViewController.swift in Sources */,
 				BD195CED1EE3DA060013D63F /* App.swift in Sources */,
 				BDD482071EE3A4D9000D5C12 /* AppListTableViewCell.swift in Sources */,

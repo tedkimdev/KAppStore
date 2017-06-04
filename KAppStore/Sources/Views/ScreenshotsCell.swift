@@ -10,8 +10,18 @@ import UIKit
 
 class ScreenshotsCell: UICollectionViewCell {
   
+  // MARK: Properties
+  
+  var screenshotURLs: [String]? {
+    didSet {
+      self.collectionView.reloadData()
+    }
+  }
+  
+  
   // MARK: UI
   
+  @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var collectionView: UICollectionView!
   
   
@@ -34,6 +44,10 @@ class ScreenshotsCell: UICollectionViewCell {
     self.collectionView.backgroundColor = .clear
   }
   
+  func configure(URLs: [String]) {
+    self.screenshotURLs = URLs
+  }
+  
 }
 
 
@@ -42,13 +56,15 @@ class ScreenshotsCell: UICollectionViewCell {
 extension ScreenshotsCell: UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 5
+    return self.screenshotURLs?.count ?? 0
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "screenshotImageCellId", for: indexPath) as! ScreenshotImageCell
     
-    cell.backgroundColor = .green
+    if let screenshotURL = self.screenshotURLs?[indexPath.item] {
+      cell.configure(imageURL: screenshotURL)
+    }
     
     return cell
     
@@ -71,11 +87,13 @@ extension ScreenshotsCell: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     
     // cell item 은 콜렉션뷰 높이 - (Section Insets top+bottom + Content Insets top + botoom)보다 작아야함.
-    return CGSize(width: 200, height: self.frame.height-100)
+    let height = self.frame.height - titleLabel.frame.height - 8 - 8 - 14 - 10
+    let width = height * UIScreen.main.bounds.width / UIScreen.main.bounds.height
+    return CGSize(width: width, height: height)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-    return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    return UIEdgeInsets(top: 0, left: 14, bottom: 14, right: 0)
   }
   
 }
