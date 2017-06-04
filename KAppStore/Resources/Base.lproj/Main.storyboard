@@ -239,7 +239,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="idK-AF-3SW">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="idK-AF-3SW" customClass="CustomImageView" customModule="KAppStore" customModuleProvider="target">
                                     <rect key="frame" x="22" y="22" width="100" height="100"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="100" id="MMy-5q-qcM"/>
@@ -256,7 +256,7 @@
                                     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </segmentedControl>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYo-T2-7da">
-                                    <rect key="frame" x="130" y="22" width="228" height="34"/>
+                                    <rect key="frame" x="130" y="22" width="234" height="34"/>
                                     <string key="text">App Name
 App Name</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -279,9 +279,11 @@ App Name</string>
                                         <constraint firstAttribute="width" constant="64" id="ZOG-4U-PzI"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(000)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOv-Gg-4SJ">
-                                    <rect key="frame" x="197" y="112" width="29" height="9.9999999999999858"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(000)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOv-Gg-4SJ">
+                                    <rect key="frame" x="196" y="108.5" width="40" height="13.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="FmU-0E-RzT"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -299,42 +301,47 @@ App Name</string>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKz-nd-tll">
-                                    <rect key="frame" x="368" y="22" width="30" height="24"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVJ-6c-SCH">
+                                    <rect key="frame" x="374" y="22" width="24" height="20"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="30" id="hVM-iY-fjY"/>
-                                        <constraint firstAttribute="height" constant="24" id="lVA-DD-KRN"/>
+                                        <constraint firstAttribute="height" constant="20" id="AnJ-OD-BqD"/>
+                                        <constraint firstAttribute="width" constant="24" id="WHo-yg-HVD"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                    <state key="normal" title="0+">
-                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                </button>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="10"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="idK-AF-3SW" firstAttribute="top" secondItem="k3G-g8-TDT" secondAttribute="topMargin" constant="14" id="1s4-Ad-iRn"/>
                                 <constraint firstItem="bhb-7J-vfl" firstAttribute="top" secondItem="7Wh-Jd-HEw" secondAttribute="bottom" constant="13" id="3yr-0s-YuM"/>
-                                <constraint firstItem="ZKz-nd-tll" firstAttribute="leading" secondItem="UYo-T2-7da" secondAttribute="trailing" constant="10" id="4HR-GO-WEK"/>
+                                <constraint firstItem="dVJ-6c-SCH" firstAttribute="top" secondItem="UYo-T2-7da" secondAttribute="top" id="9cM-M8-QNW"/>
                                 <constraint firstAttribute="bottomMargin" secondItem="bhb-7J-vfl" secondAttribute="bottom" constant="8" id="AiX-mA-am8"/>
+                                <constraint firstItem="DOv-Gg-4SJ" firstAttribute="leading" secondItem="5BF-Gs-y8F" secondAttribute="trailing" constant="2" id="DC8-b8-M3e"/>
                                 <constraint firstItem="c14-d3-Gte" firstAttribute="top" secondItem="UYo-T2-7da" secondAttribute="bottom" constant="8" id="Fq7-7a-3zc"/>
                                 <constraint firstAttribute="trailingMargin" secondItem="7Wh-Jd-HEw" secondAttribute="trailing" constant="8" id="JbP-H6-tWd"/>
                                 <constraint firstItem="5BF-Gs-y8F" firstAttribute="bottom" secondItem="idK-AF-3SW" secondAttribute="bottom" id="LKr-et-F3H"/>
                                 <constraint firstItem="idK-AF-3SW" firstAttribute="leading" secondItem="k3G-g8-TDT" secondAttribute="leadingMargin" constant="14" id="NMr-Ty-LUU"/>
-                                <constraint firstAttribute="trailingMargin" secondItem="ZKz-nd-tll" secondAttribute="trailing" constant="8" id="PZz-c0-BN5"/>
                                 <constraint firstAttribute="trailing" secondItem="Rem-E3-erP" secondAttribute="trailing" id="SDO-wf-R70"/>
                                 <constraint firstAttribute="bottom" secondItem="Rem-E3-erP" secondAttribute="bottom" id="bET-2c-21l"/>
                                 <constraint firstItem="Rem-E3-erP" firstAttribute="leading" secondItem="k3G-g8-TDT" secondAttribute="leading" id="bcL-YN-atJ"/>
                                 <constraint firstAttribute="trailingMargin" secondItem="bhb-7J-vfl" secondAttribute="trailing" constant="40" id="ef0-TS-XhP"/>
+                                <constraint firstItem="dVJ-6c-SCH" firstAttribute="leading" secondItem="UYo-T2-7da" secondAttribute="trailing" constant="10" id="fQ5-He-0Dg"/>
                                 <constraint firstItem="c14-d3-Gte" firstAttribute="leading" secondItem="idK-AF-3SW" secondAttribute="trailing" constant="8" id="fuF-98-xzy"/>
-                                <constraint firstItem="ZKz-nd-tll" firstAttribute="top" secondItem="UYo-T2-7da" secondAttribute="top" id="gAq-Li-jYg"/>
                                 <constraint firstItem="UYo-T2-7da" firstAttribute="top" secondItem="k3G-g8-TDT" secondAttribute="topMargin" constant="14" id="jTp-jx-jv9"/>
                                 <constraint firstItem="UYo-T2-7da" firstAttribute="leading" secondItem="idK-AF-3SW" secondAttribute="trailing" constant="8" id="oEH-s5-WQw"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="dVJ-6c-SCH" secondAttribute="trailing" constant="8" id="q2M-Gy-fi9"/>
                                 <constraint firstItem="bhb-7J-vfl" firstAttribute="leading" secondItem="k3G-g8-TDT" secondAttribute="leadingMargin" constant="40" id="qEd-re-myt"/>
+                                <constraint firstItem="DOv-Gg-4SJ" firstAttribute="bottom" secondItem="5BF-Gs-y8F" secondAttribute="bottom" id="s75-cw-gXk"/>
                                 <constraint firstItem="5BF-Gs-y8F" firstAttribute="leading" secondItem="idK-AF-3SW" secondAttribute="trailing" constant="8" id="uwc-z8-TJU"/>
                             </constraints>
                             <connections>
-                                <outlet property="appImageView" destination="idK-AF-3SW" id="p4X-qp-N4T"/>
+                                <outlet property="appImageView" destination="idK-AF-3SW" id="zwq-Pd-MMl"/>
+                                <outlet property="appNameLabel" destination="UYo-T2-7da" id="iL2-vf-smG"/>
+                                <outlet property="artistNameLabel" destination="c14-d3-Gte" id="diI-jh-NNi"/>
+                                <outlet property="contentAdvisoryRatingLabel" destination="dVJ-6c-SCH" id="r9g-QZ-OO5"/>
                                 <outlet property="downloadButton" destination="7Wh-Jd-HEw" id="pYP-kM-Geh"/>
+                                <outlet property="reviewCountLabel" destination="DOv-Gg-4SJ" id="CN6-2j-UZq"/>
                             </connections>
                         </collectionReusableView>
                         <connections>

@@ -66,6 +66,10 @@ class AppDetailViewController: UICollectionViewController {
   override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
     let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerId", for: indexPath) as! AppDetailHeader
     
+    if let appDetailInfo = self.appDetailInfo {
+      header.configure(appDetailInfo: appDetailInfo)
+    }
+    
     return header
   }
   

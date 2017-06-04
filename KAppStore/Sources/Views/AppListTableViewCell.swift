@@ -30,9 +30,9 @@ final class AppListTableViewCell: UITableViewCell {
     self.appImageView.contentMode = .scaleAspectFill
     self.appImageView.layer.masksToBounds = true
     
-    self.downloadButton.layer.borderColor = self.downloadButton.tintColor.cgColor
-    self.downloadButton.layer.borderWidth = 1
-    self.downloadButton.layer.cornerRadius = 3
+    self.downloadButton.layer.borderWidth = 0.5
+    self.downloadButton.layer.borderColor = UIColor.rgb(red: 0, green: 129, blue: 250).cgColor
+    self.downloadButton.layer.cornerRadius = 5
   }
   
   

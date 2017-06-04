@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BD0F16781EE43A8E006FDF3F /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F16771EE43A8E006FDF3F /* CustomImageView.swift */; };
 		BD0F167C1EE45439006FDF3F /* AppDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F167B1EE45439006FDF3F /* AppDetailInfo.swift */; };
+		BD0F167E1EE4865A006FDF3F /* screen696x696.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BD0F167D1EE4865A006FDF3F /* screen696x696.jpeg */; };
 		BD195CDF1EE3AE5D0013D63F /* AppDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD195CDE1EE3AE5D0013D63F /* AppDetailHeader.swift */; };
 		BD195CE21EE3C4B80013D63F /* UIColor+rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD195CE11EE3C4B80013D63F /* UIColor+rgb.swift */; };
 		BD195CE61EE3C6DD0013D63F /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD195CE51EE3C6DD0013D63F /* LineView.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		BD0F16771EE43A8E006FDF3F /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		BD0F167B1EE45439006FDF3F /* AppDetailInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailInfo.swift; sourceTree = "<group>"; };
+		BD0F167D1EE4865A006FDF3F /* screen696x696.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screen696x696.jpeg; sourceTree = "<group>"; };
 		BD195CDE1EE3AE5D0013D63F /* AppDetailHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailHeader.swift; sourceTree = "<group>"; };
 		BD195CE11EE3C4B80013D63F /* UIColor+rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+rgb.swift"; sourceTree = "<group>"; };
 		BD195CE51EE3C6DD0013D63F /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				BDD481E31EE2A770000D5C12 /* 1.txt */,
+				BD0F167D1EE4865A006FDF3F /* screen696x696.jpeg */,
 				BDD481F71EE2AAB5000D5C12 /* 53x53bb-85.png */,
 				BDD481E41EE2A770000D5C12 /* appList.json */,
 				BDD481E51EE2A770000D5C12 /* Assets.xcassets */,
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD481F31EE2A770000D5C12 /* Main.storyboard in Resources */,
+				BD0F167E1EE4865A006FDF3F /* screen696x696.jpeg in Resources */,
 				BDD481F21EE2A770000D5C12 /* LaunchScreen.storyboard in Resources */,
 				BDD481F11EE2A770000D5C12 /* Assets.xcassets in Resources */,
 				BDD481F81EE2AAB5000D5C12 /* 53x53bb-85.png in Resources */,

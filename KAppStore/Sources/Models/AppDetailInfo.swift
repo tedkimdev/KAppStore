@@ -18,8 +18,9 @@ struct AppDetailInfo {
   var description: String?
   var advisoryRating: String?
   var releaseNotes: String?
+  var appImageURL: String?
   var screenshotURLs: [String]?
-  
+  var reviewCount: Int?
   
   // MARK: Initializing
   
@@ -30,7 +31,9 @@ struct AppDetailInfo {
     self.description = dictionary["description"] as? String ?? ""
     self.advisoryRating = dictionary["contentAdvisoryRating"] as? String ?? ""
     self.releaseNotes = dictionary["releaseNotes"] as? String ?? ""
+    self.appImageURL = dictionary["artworkUrl100"] as? String ?? ""
     self.screenshotURLs = dictionary["screenshotUrls"] as? [String] ?? []
+    self.reviewCount = dictionary["userRatingCountForCurrentVersion"] as? Int ?? 0
   }
   
 }
