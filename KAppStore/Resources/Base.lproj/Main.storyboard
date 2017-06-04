@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--App List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KAppStore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AppListViewController" customModule="KAppStore" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ekh-Vh-4CW" id="e44-Zm-ZM2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51E-D0-xb5">
@@ -45,14 +45,14 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="53x53bb-85.png" translatesAutoresizingMaskIntoConstraints="NO" id="RGh-zM-s1r">
                                                     <rect key="frame" x="42" y="18.5" width="53" height="53"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모바일 결제(ISP)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFX-bF-bSm">
-                                                    <rect key="frame" x="103" y="9" width="95.5" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFX-bF-bSm">
+                                                    <rect key="frame" x="103" y="9" width="68" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="금융" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tU-Uu-4qS">
-                                                    <rect key="frame" x="103" y="34" width="19.5" height="13.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="category name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tU-Uu-4qS">
+                                                    <rect key="frame" x="103" y="34" width="78.5" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -132,34 +132,19 @@
         <scene sceneID="8Og-5O-l8s">
             <objects>
                 <collectionViewController storyboardIdentifier="appDetailViewControllerId" id="31z-hS-eZA" customClass="AppDetailViewController" customModule="KAppStore" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Dw7-nL-kHt">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Dw7-nL-kHt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ksd-V1-frH">
                             <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="179"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Bvb-I8-thh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8dO-oA-rda">
-                                            <rect key="frame" x="8" y="8" width="122" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                    </subviews>
-                                </view>
-                                <size key="customSize" width="375" height="204"/>
-                            </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rB0-Ws-zFd">
-                                <rect key="frame" x="163" y="214" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="179" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -167,6 +152,71 @@
                                 </view>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="headerId" reuseIdentifier="headerId" id="k3G-g8-TDT" customClass="AppDetailHeader" customModule="KAppStore" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-card" translatesAutoresizingMaskIntoConstraints="NO" id="idK-AF-3SW">
+                                    <rect key="frame" x="22" y="22" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="MMy-5q-qcM"/>
+                                        <constraint firstAttribute="height" constant="100" id="b00-yt-utJ"/>
+                                    </constraints>
+                                </imageView>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bhb-7J-vfl">
+                                    <rect key="frame" x="48" y="135" width="279" height="29"/>
+                                    <segments>
+                                        <segment title="세부사항"/>
+                                        <segment title="리뷰"/>
+                                        <segment title="관련 콘텐츠"/>
+                                    </segments>
+                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </segmentedControl>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYo-T2-7da">
+                                    <rect key="frame" x="130" y="22" width="100" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="Cy4-za-fIn"/>
+                                        <constraint firstAttribute="width" constant="100" id="XrS-2H-uht"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wh-Jd-HEw">
+                                    <rect key="frame" x="293" y="90" width="60" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="Oon-ov-vb8"/>
+                                        <constraint firstAttribute="height" constant="32" id="P8D-1X-9Uj"/>
+                                    </constraints>
+                                    <state key="normal" title="받기"/>
+                                </button>
+                                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rem-E3-erP" customClass="LineView" customModule="KAppStore" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="178" width="375" height="1"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="aWK-ei-8Je"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="idK-AF-3SW" firstAttribute="top" secondItem="k3G-g8-TDT" secondAttribute="topMargin" constant="14" id="1s4-Ad-iRn"/>
+                                <constraint firstItem="bhb-7J-vfl" firstAttribute="top" secondItem="7Wh-Jd-HEw" secondAttribute="bottom" constant="13" id="3yr-0s-YuM"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="bhb-7J-vfl" secondAttribute="bottom" constant="8" id="AiX-mA-am8"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="7Wh-Jd-HEw" secondAttribute="trailing" constant="14" id="JbP-H6-tWd"/>
+                                <constraint firstItem="idK-AF-3SW" firstAttribute="leading" secondItem="k3G-g8-TDT" secondAttribute="leadingMargin" constant="14" id="NMr-Ty-LUU"/>
+                                <constraint firstAttribute="trailing" secondItem="Rem-E3-erP" secondAttribute="trailing" id="SDO-wf-R70"/>
+                                <constraint firstAttribute="bottom" secondItem="Rem-E3-erP" secondAttribute="bottom" id="bET-2c-21l"/>
+                                <constraint firstItem="Rem-E3-erP" firstAttribute="leading" secondItem="k3G-g8-TDT" secondAttribute="leading" id="bcL-YN-atJ"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="bhb-7J-vfl" secondAttribute="trailing" constant="40" id="ef0-TS-XhP"/>
+                                <constraint firstItem="UYo-T2-7da" firstAttribute="top" secondItem="k3G-g8-TDT" secondAttribute="topMargin" constant="14" id="jTp-jx-jv9"/>
+                                <constraint firstItem="UYo-T2-7da" firstAttribute="leading" secondItem="idK-AF-3SW" secondAttribute="trailing" constant="8" id="oEH-s5-WQw"/>
+                                <constraint firstItem="bhb-7J-vfl" firstAttribute="leading" secondItem="k3G-g8-TDT" secondAttribute="leadingMargin" constant="40" id="qEd-re-myt"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="appImageView" destination="idK-AF-3SW" id="p4X-qp-N4T"/>
+                                <outlet property="downloadButton" destination="7Wh-Jd-HEw" id="pYP-kM-Geh"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="31z-hS-eZA" id="h78-RC-gSm"/>
                             <outlet property="delegate" destination="31z-hS-eZA" id="2iu-Ms-vlA"/>
@@ -175,7 +225,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGb-FB-T20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2461.5999999999999" y="138.98050974512745"/>
+            <point key="canvasLocation" x="2384.8000000000002" y="138.98050974512745"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="g4L-7V-6gT">
@@ -217,5 +267,6 @@
     </scenes>
     <resources>
         <image name="53x53bb-85.png" width="53" height="53"/>
+        <image name="icon-card" width="20" height="20"/>
     </resources>
 </document>

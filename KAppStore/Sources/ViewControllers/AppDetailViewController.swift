@@ -10,7 +10,6 @@ import UIKit
 
 class AppDetailViewController: UICollectionViewController {
 
-  
   // MARK: View Life Cycle
   
   override func viewDidLoad() {
@@ -22,7 +21,6 @@ class AppDetailViewController: UICollectionViewController {
     // Register cell classes
     self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
     
-    // Do any additional setup after loading the view.
   }
   
   override func didReceiveMemoryWarning() {
@@ -37,6 +35,11 @@ class AppDetailViewController: UICollectionViewController {
     return 1
   }
   
+  override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerId", for: indexPath) as! AppDetailHeader
+    
+    return header
+  }
   
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return 7
@@ -45,8 +48,20 @@ class AppDetailViewController: UICollectionViewController {
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
     
-    cell.backgroundColor = .blue
+//    cell.backgroundColor = .blue
     
     return cell
   }
+  
+}
+
+
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension AppDetailViewController: UICollectionViewDelegateFlowLayout {
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    return CGSize(width: self.view.frame.width, height: 200)
+  }
+  
 }

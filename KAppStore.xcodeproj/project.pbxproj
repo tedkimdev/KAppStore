@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD195CDF1EE3AE5D0013D63F /* AppDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD195CDE1EE3AE5D0013D63F /* AppDetailHeader.swift */; };
+		BD195CE21EE3C4B80013D63F /* UIColor+rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD195CE11EE3C4B80013D63F /* UIColor+rgb.swift */; };
+		BD195CE61EE3C6DD0013D63F /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD195CE51EE3C6DD0013D63F /* LineView.swift */; };
 		BDD481F11EE2A770000D5C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD481E51EE2A770000D5C12 /* Assets.xcassets */; };
 		BDD481F21EE2A770000D5C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD481E61EE2A770000D5C12 /* LaunchScreen.storyboard */; };
 		BDD481F31EE2A770000D5C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD481E81EE2A770000D5C12 /* Main.storyboard */; };
 		BDD481F41EE2A770000D5C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD481EB1EE2A770000D5C12 /* AppDelegate.swift */; };
-		BDD481F51EE2A770000D5C12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD481EC1EE2A770000D5C12 /* ViewController.swift */; };
 		BDD481F81EE2AAB5000D5C12 /* 53x53bb-85.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD481F71EE2AAB5000D5C12 /* 53x53bb-85.png */; };
-		BDD481FA1EE2E5B5000D5C12 /* AppListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD481F91EE2E5B5000D5C12 /* AppListCell.swift */; };
-		BDD481FE1EE2FF4E000D5C12 /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD481FD1EE2FF4E000D5C12 /* AppDetailViewController.swift */; };
+		BDD482051EE3A4D9000D5C12 /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD482011EE3A4D9000D5C12 /* AppDetailViewController.swift */; };
+		BDD482061EE3A4D9000D5C12 /* AppListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD482021EE3A4D9000D5C12 /* AppListViewController.swift */; };
+		BDD482071EE3A4D9000D5C12 /* AppListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD482041EE3A4D9000D5C12 /* AppListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD195CDE1EE3AE5D0013D63F /* AppDetailHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailHeader.swift; sourceTree = "<group>"; };
+		BD195CE11EE3C4B80013D63F /* UIColor+rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+rgb.swift"; sourceTree = "<group>"; };
+		BD195CE51EE3C6DD0013D63F /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		BDD481C61EE24893000D5C12 /* KAppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD481E31EE2A770000D5C12 /* 1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1.txt; sourceTree = "<group>"; };
 		BDD481E41EE2A770000D5C12 /* appList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appList.json; sourceTree = "<group>"; };
@@ -25,11 +31,11 @@
 		BDD481E71EE2A770000D5C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDD481E91EE2A770000D5C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDD481EB1EE2A770000D5C12 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BDD481EC1EE2A770000D5C12 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BDD481EE1EE2A770000D5C12 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDD481F71EE2AAB5000D5C12 /* 53x53bb-85.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53x53bb-85.png"; sourceTree = "<group>"; };
-		BDD481F91EE2E5B5000D5C12 /* AppListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppListCell.swift; sourceTree = "<group>"; };
-		BDD481FD1EE2FF4E000D5C12 /* AppDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailViewController.swift; sourceTree = "<group>"; };
+		BDD482011EE3A4D9000D5C12 /* AppDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailViewController.swift; sourceTree = "<group>"; };
+		BDD482021EE3A4D9000D5C12 /* AppListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppListViewController.swift; sourceTree = "<group>"; };
+		BDD482041EE3A4D9000D5C12 /* AppListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD195CE01EE3C4940013D63F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BD195CE11EE3C4B80013D63F /* UIColor+rgb.swift */,
+				BD195CE51EE3C6DD0013D63F /* LineView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		BDD481BD1EE24893000D5C12 = {
 			isa = PBXGroup;
 			children = (
@@ -86,9 +101,10 @@
 			isa = PBXGroup;
 			children = (
 				BDD481EB1EE2A770000D5C12 /* AppDelegate.swift */,
-				BDD481EC1EE2A770000D5C12 /* ViewController.swift */,
-				BDD481F91EE2E5B5000D5C12 /* AppListCell.swift */,
-				BDD481FD1EE2FF4E000D5C12 /* AppDetailViewController.swift */,
+				BDD481FF1EE3A4D9000D5C12 /* Models */,
+				BDD482001EE3A4D9000D5C12 /* ViewControllers */,
+				BDD482031EE3A4D9000D5C12 /* Views */,
+				BD195CE01EE3C4940013D63F /* Utils */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -99,6 +115,31 @@
 				BDD481EE1EE2A770000D5C12 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BDD481FF1EE3A4D9000D5C12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BDD482001EE3A4D9000D5C12 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BDD482011EE3A4D9000D5C12 /* AppDetailViewController.swift */,
+				BDD482021EE3A4D9000D5C12 /* AppListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BDD482031EE3A4D9000D5C12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BDD482041EE3A4D9000D5C12 /* AppListCell.swift */,
+				BD195CDE1EE3AE5D0013D63F /* AppDetailHeader.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,10 +215,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD481F51EE2A770000D5C12 /* ViewController.swift in Sources */,
-				BDD481FA1EE2E5B5000D5C12 /* AppListCell.swift in Sources */,
+				BD195CDF1EE3AE5D0013D63F /* AppDetailHeader.swift in Sources */,
+				BDD482061EE3A4D9000D5C12 /* AppListViewController.swift in Sources */,
+				BDD482071EE3A4D9000D5C12 /* AppListCell.swift in Sources */,
+				BD195CE21EE3C4B80013D63F /* UIColor+rgb.swift in Sources */,
 				BDD481F41EE2A770000D5C12 /* AppDelegate.swift in Sources */,
-				BDD481FE1EE2FF4E000D5C12 /* AppDetailViewController.swift in Sources */,
+				BD195CE61EE3C6DD0013D63F /* LineView.swift in Sources */,
+				BDD482051EE3A4D9000D5C12 /* AppDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +381,7 @@
 				BDD481DA1EE24893000D5C12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
