@@ -69,7 +69,9 @@ extension ScreenshotsCell: UICollectionViewDelegate {
 extension ScreenshotsCell: UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: 200, height: self.frame.height)
+    
+    // cell item 은 콜렉션뷰 높이 - (Section Insets top+bottom + Content Insets top + botoom)보다 작아야함.
+    return CGSize(width: 200, height: self.frame.height-100)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--App List View Controller-->
+        <!--금융-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AppListViewController" customModule="KAppStore" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,44 +33,44 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51E-D0-xb5">
-                                                    <rect key="frame" x="16" y="36" width="18" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51E-D0-xb5">
+                                                    <rect key="frame" x="12" y="36" width="28" height="17"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="18" id="jgc-u7-wp0"/>
+                                                        <constraint firstAttribute="width" constant="28" id="jgc-u7-wp0"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RGh-zM-s1r">
-                                                    <rect key="frame" x="42" y="18" width="54" height="54"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RGh-zM-s1r" customClass="CustomImageView" customModule="KAppStore" customModuleProvider="target">
+                                                    <rect key="frame" x="48" y="18" width="54" height="54"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="54" id="JJ3-qC-R4J"/>
                                                         <constraint firstAttribute="width" constant="54" id="Z19-Ia-c0I"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFX-bF-bSm">
-                                                    <rect key="frame" x="104" y="16.333333333333336" width="68" height="17.000000000000007"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFX-bF-bSm">
+                                                    <rect key="frame" x="110" y="22.333333333333336" width="178" height="17.000000000000007"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="category name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tU-Uu-4qS">
-                                                    <rect key="frame" x="104" y="37.333333333333336" width="79" height="14"/>
+                                                    <rect key="frame" x="110" y="43.333333333333336" width="79" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkk-s3-2Kd">
-                                                    <rect key="frame" x="104" y="55.333333333333329" width="128" height="15.999999999999986"/>
+                                                    <rect key="frame" x="110" y="61.333333333333329" width="128" height="9.9999999999999858"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="16" id="32H-Hn-lAJ"/>
+                                                        <constraint firstAttribute="height" constant="10" id="32H-Hn-lAJ"/>
                                                         <constraint firstAttribute="width" constant="128" id="ZPb-J1-UUR"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(000)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vek-Ll-3nJ">
-                                                    <rect key="frame" x="236" y="55.333333333333329" width="29" height="15.999999999999986"/>
+                                                    <rect key="frame" x="242" y="61.333333333333329" width="29" height="9.9999999999999858"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -88,7 +88,7 @@
                                             <constraints>
                                                 <constraint firstItem="5tU-Uu-4qS" firstAttribute="leading" secondItem="RGh-zM-s1r" secondAttribute="trailing" constant="8" id="5Vy-6Q-Vma"/>
                                                 <constraint firstItem="lkk-s3-2Kd" firstAttribute="bottom" secondItem="RGh-zM-s1r" secondAttribute="bottom" id="8QZ-cu-RRF"/>
-                                                <constraint firstItem="51E-D0-xb5" firstAttribute="leading" secondItem="e44-Zm-ZM2" secondAttribute="leadingMargin" constant="8" id="D2Z-RQ-DY3"/>
+                                                <constraint firstItem="51E-D0-xb5" firstAttribute="leading" secondItem="e44-Zm-ZM2" secondAttribute="leadingMargin" constant="4" id="D2Z-RQ-DY3"/>
                                                 <constraint firstItem="Vek-Ll-3nJ" firstAttribute="height" secondItem="lkk-s3-2Kd" secondAttribute="height" id="LgC-52-yQk"/>
                                                 <constraint firstItem="RGh-zM-s1r" firstAttribute="leading" secondItem="51E-D0-xb5" secondAttribute="trailing" constant="8" id="MBR-ZL-BcP"/>
                                                 <constraint firstItem="Vek-Ll-3nJ" firstAttribute="bottom" secondItem="lkk-s3-2Kd" secondAttribute="bottom" id="MCz-o8-Jxj"/>
@@ -101,10 +101,11 @@
                                                 <constraint firstItem="4UU-6E-23K" firstAttribute="centerY" secondItem="e44-Zm-ZM2" secondAttribute="centerY" id="uTb-KC-UNF"/>
                                                 <constraint firstItem="lkk-s3-2Kd" firstAttribute="top" secondItem="5tU-Uu-4qS" secondAttribute="bottom" constant="4" id="xiW-of-QbM"/>
                                                 <constraint firstItem="lkk-s3-2Kd" firstAttribute="leading" secondItem="RGh-zM-s1r" secondAttribute="trailing" constant="8" id="xvP-lc-eqF"/>
+                                                <constraint firstItem="4UU-6E-23K" firstAttribute="leading" secondItem="TFX-bF-bSm" secondAttribute="trailing" constant="60" id="yvl-Lx-KvA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="appImageView" destination="RGh-zM-s1r" id="7tD-Gl-YJs"/>
+                                            <outlet property="appImageView" destination="RGh-zM-s1r" id="uOF-jA-I5w"/>
                                             <outlet property="appNameLabel" destination="TFX-bF-bSm" id="Vw1-pE-kyh"/>
                                             <outlet property="categoryLabel" destination="5tU-Uu-4qS" id="mdb-Tg-raH"/>
                                             <outlet property="downloadButton" destination="4UU-6E-23K" id="QPW-vX-fU8"/>
@@ -123,7 +124,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HoF-gz-7e1" secondAttribute="bottom" id="w0s-eg-4hN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="XQC-Hw-ihF"/>
+                    <navigationItem key="navigationItem" title="금융" id="XQC-Hw-ihF"/>
                     <connections>
                         <outlet property="tableView" destination="HoF-gz-7e1" id="Lwd-oN-6Jz"/>
                     </connections>
@@ -141,17 +142,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="ksd-V1-frH">
-                            <size key="itemSize" width="414" height="355"/>
-                            <size key="headerReferenceSize" width="50" height="179"/>
+                            <size key="itemSize" width="414" height="500"/>
+                            <size key="headerReferenceSize" width="50" height="180"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="screenshotsCellId" reuseIdentifier="screenshotsCellId" id="rB0-Ws-zFd" customClass="ScreenshotsCell" customModule="KAppStore" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="179" width="414" height="355"/>
+                                <rect key="frame" x="0.0" y="180" width="414" height="500"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="355"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDc-QN-jtH">
@@ -161,7 +162,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gLE-Kq-NZ6">
-                                            <rect key="frame" x="8" y="29" width="398" height="318"/>
+                                            <rect key="frame" x="8" y="29" width="398" height="463"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lOj-WV-S1R">
                                                 <size key="itemSize" width="170" height="184"/>
@@ -171,7 +172,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cellId" reuseIdentifier="cellId" id="kDK-XT-L0h">
-                                                    <rect key="frame" x="0.0" y="66.666666666666671" width="170" height="184"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="184"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                         <rect key="frame" x="0.0" y="0.0" width="170" height="184"/>
@@ -196,7 +197,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="headerId" reuseIdentifier="headerId" id="k3G-g8-TDT" customClass="AppDetailHeader" customModule="KAppStore" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="idK-AF-3SW">

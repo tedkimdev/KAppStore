@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0F16781EE43A8E006FDF3F /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F16771EE43A8E006FDF3F /* CustomImageView.swift */; };
 		BD195CDF1EE3AE5D0013D63F /* AppDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD195CDE1EE3AE5D0013D63F /* AppDetailHeader.swift */; };
 		BD195CE21EE3C4B80013D63F /* UIColor+rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD195CE11EE3C4B80013D63F /* UIColor+rgb.swift */; };
 		BD195CE61EE3C6DD0013D63F /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD195CE51EE3C6DD0013D63F /* LineView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD0F16771EE43A8E006FDF3F /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		BD195CDE1EE3AE5D0013D63F /* AppDetailHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailHeader.swift; sourceTree = "<group>"; };
 		BD195CE11EE3C4B80013D63F /* UIColor+rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+rgb.swift"; sourceTree = "<group>"; };
 		BD195CE51EE3C6DD0013D63F /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD0F16761EE43A5F006FDF3F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BD0F16771EE43A8E006FDF3F /* CustomImageView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BD195CE01EE3C4940013D63F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +130,7 @@
 				BDD482031EE3A4D9000D5C12 /* Views */,
 				BD195CE91EE3D9040013D63F /* Services */,
 				BD195CE01EE3C4940013D63F /* Utils */,
+				BD0F16761EE43A5F006FDF3F /* Extensions */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -239,6 +250,7 @@
 				BDD482071EE3A4D9000D5C12 /* AppListTableViewCell.swift in Sources */,
 				BD195CE21EE3C4B80013D63F /* UIColor+rgb.swift in Sources */,
 				BDD481F41EE2A770000D5C12 /* AppDelegate.swift in Sources */,
+				BD0F16781EE43A8E006FDF3F /* CustomImageView.swift in Sources */,
 				BD195CE81EE3C9C20013D63F /* ScreenshotsCell.swift in Sources */,
 				BD195CE61EE3C6DD0013D63F /* LineView.swift in Sources */,
 				BDD482051EE3A4D9000D5C12 /* AppDetailViewController.swift in Sources */,

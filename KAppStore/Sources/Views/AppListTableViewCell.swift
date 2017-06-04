@@ -13,7 +13,7 @@ final class AppListTableViewCell: UITableViewCell {
   // MARK: UI
   
   @IBOutlet weak var numberLabel: UILabel!
-  @IBOutlet weak var appImageView: UIImageView!
+  @IBOutlet weak var appImageView: CustomImageView!
   @IBOutlet weak var appNameLabel: UILabel!
   @IBOutlet weak var categoryLabel: UILabel!
   @IBOutlet weak var reviewCountLabel: UILabel!
@@ -46,22 +46,7 @@ final class AppListTableViewCell: UITableViewCell {
     self.appNameLabel.text = app.appName
     self.categoryLabel.text = app.category
     
-    guard let url = URL(string: imageURL) else { return }
-    URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-      guard let `self` = self else { return }
-      
-      if let error = error {
-        print("Failed to load image: ", error)
-        return
-      }
-      
-      guard let imageData = data else { return }
-      DispatchQueue.main.async {
-        self.appImageView.image = UIImage(data: imageData)
-      }
-      
-    }.resume()
-    
+    self.appImageView.loadImage(urlString: imageURL)
     
   }
   
