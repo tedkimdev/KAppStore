@@ -23,6 +23,7 @@ class AppDetailHeader: UICollectionReusableView {
   @IBOutlet weak var downloadButton: UIButton!
   @IBOutlet weak var reviewCountLabel: UILabel!
   @IBOutlet weak var contentAdvisoryRatingLabel: UILabel!
+  @IBOutlet weak var userRatingView: UserRatingView!
   
   
   // MARK: - View Life Cycle
@@ -61,6 +62,19 @@ class AppDetailHeader: UICollectionReusableView {
     if let reviewCount = appDetailInfo.reviewCount, reviewCount > 0 {
       self.reviewCountLabel.text = "(\(reviewCount))"
     } else { self.reviewCountLabel.text = "" }
+    
+    if let userRating = self.appDetailInfo?.averageUserRating {
+      self.userRatingView.rate = userRating
+    }
+    
+  }
+  
+  
+  // MARK: Action
+  
+  @IBAction func segmentedControlValueChanged(_ sender: Any) {
+    
+    // TODO: View Mode 변환( 3가지 )
   }
   
 }

@@ -21,6 +21,8 @@ struct AppDetailInfo {
   var appImageURL: String?
   var screenshotURLs: [String]?
   var reviewCount: Int?
+  var releaseDate: String!
+  var averageUserRating: Float?
   
   // MARK: Initializing
   
@@ -34,6 +36,8 @@ struct AppDetailInfo {
     self.appImageURL = dictionary["artworkUrl100"] as? String ?? ""
     self.screenshotURLs = dictionary["screenshotUrls"] as? [String] ?? []
     self.reviewCount = dictionary["userRatingCountForCurrentVersion"] as? Int ?? 0
+    self.releaseDate = dictionary["currentVersionReleaseDate"] as? String ?? ""
+    self.averageUserRating = dictionary["averageUserRating"] as? Float ?? 0
   }
   
 }

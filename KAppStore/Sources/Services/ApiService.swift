@@ -69,7 +69,7 @@ struct ApiService {
         guard let jsonDictionary = json as? [String: Any],
           let results = jsonDictionary["results"] as? [[String: Any]],
           let dictionary = results.first else { return }
-        
+        print(dictionary)//////
         DispatchQueue.main.async {
           completion(AppDetailInfo(dictionary: dictionary))
         }

@@ -18,7 +18,6 @@ class AppDetailViewController: UICollectionViewController {
            .content(title: "releaseNotes"),
 //           .information,
 //           .selectable,
-//           .artistName, 
           ]
   )
   
@@ -34,7 +33,7 @@ class AppDetailViewController: UICollectionViewController {
   
   var appDetailInfo: AppDetailInfo? {
     didSet {
-//      print(self.appDetailInfo ?? "no app detail info")
+      print(self.appDetailInfo ?? "no app detail info")
       self.collectionView?.reloadData()
     }
   }
@@ -111,8 +110,10 @@ class AppDetailViewController: UICollectionViewController {
         cell.configure(title: "설명", content: description)
         
       } else if let releaseNotes = self.appDetailInfo?.releaseNotes,
+        let releaseDate = self.appDetailInfo?.releaseDate,
         title == "releaseNotes" {
-        cell.configure(title: "새로운 기능", content: releaseNotes)
+        
+        cell.configure(title: "새로운 기능", content: releaseDate + "\n\n" + releaseNotes)
       }
       return cell
       
