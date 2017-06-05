@@ -14,10 +14,11 @@ class AppDetailViewController: UICollectionViewController {
   
   fileprivate var cellTypes: CellType = CellType(
     items:[.screenshot,
-           .content,
+           .content(title: "description"),
+           .content(title: "releaseNotes"),
            .information,
            .selectable,
-           .artistName,
+           .artistName, 
           ]
   )
   
@@ -65,13 +66,25 @@ class AppDetailViewController: UICollectionViewController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-    let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerId", for: indexPath) as! AppDetailHeader
     
-    if let appDetailInfo = self.appDetailInfo {
-      header.configure(appDetailInfo: appDetailInfo)
+    switch kind {
+    case UICollectionElementKindSectionHeader:
+      let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerId", for: indexPath) as! AppDetailHeader
+      if let appDetailInfo = self.appDetailInfo {
+        header.configure(appDetailInfo: appDetailInfo)
+      }
+      return header
+      
+    case UICollectionElementKindSectionFooter:
+      let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footerId", for: indexPath) as! AppDetailFooter
+      if let appDetailInfo = self.appDetailInfo, let artistName = appDetailInfo.artistName {
+        footer.configure(artistName: artistName)
+      }
+      return footer
+      
+    default:
+      return UICollectionReusableView()
     }
-    
-    return header
   }
   
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -81,6 +94,7 @@ class AppDetailViewController: UICollectionViewController {
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
     switch self.cellTypes.items[indexPath.item] {
+      
     case .screenshot:
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "screenshotsCellId", for: indexPath) as! ScreenshotsCell
       
@@ -90,9 +104,16 @@ class AppDetailViewController: UICollectionViewController {
       }
       return cell
       
-    case .content:
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contentCellId", for: indexPath)
-      cell.backgroundColor = .green
+    case .content(let title):
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contentCellId", for: indexPath) as! ContentViewCell
+      if let description = self.appDetailInfo?.description,
+        title == "description" {
+        cell.configure(title: "설명", content: description)
+        
+      } else if let releaseNotes = self.appDetailInfo?.releaseNotes,
+        title == "releaseNotes" {
+        cell.configure(title: "새로운 기능", content: releaseNotes)
+      }
       return cell
       
     case .information:
@@ -124,8 +145,20 @@ extension AppDetailViewController: UICollectionViewDelegateFlowLayout {
     return CGSize(width: self.view.frame.width, height: 180)
   }
   
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+    return CGSize(width: self.view.frame.width, height: 40)
+  }
+  
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: self.view.frame.width, height: 360)
+    
+    switch self.cellTypes.items[indexPath.item] {
+    case .content:
+      // TODO: 텍스트 높이만큼 높이 조정
+      return CGSize(width: self.view.frame.width, height: 360)
+      
+    default:
+      return CGSize(width: self.view.frame.width, height: 360)
+    }
   }
   
 }

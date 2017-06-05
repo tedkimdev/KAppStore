@@ -12,7 +12,7 @@ struct CellType {
 
 enum CellItemType {
   case screenshot
-  case content
+  case content(title: String)
   case information
   case selectable
   case artistName
