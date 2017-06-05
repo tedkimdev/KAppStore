@@ -10,6 +10,8 @@ import Foundation
 
 struct ApiService {
   
+  // TODO: Paging..
+  
   /// 금융 카테고리 무료 앱 순위 가져오기
   static func appList(completion: @escaping ([App]) -> ()) {
     let urlString = "https://itunes.apple.com/kr/rss/topfreeapplications/limit=50/genre=6015/json"

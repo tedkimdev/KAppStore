@@ -12,12 +12,14 @@ final class AppListViewController: UIViewController {
   
   // MARK: Properties
   
+  var isLoading: Bool = false
   var apps: [App] = [App]()
   
   
   // MARK: UI
   
   @IBOutlet weak var tableView: UITableView!
+  let refreshControl = UIRefreshControl()
   
   
   // MARK: View Life Cycle
@@ -32,7 +34,11 @@ final class AppListViewController: UIViewController {
     self.tableView.dataSource = self
     self.tableView.delegate = self
     
-    self.loadAppList()
+    self.refreshControl.addTarget(self, action: #selector(refreshControlDidChangeValue), for: .valueChanged)
+    
+    self.tableView.addSubview(self.refreshControl)
+    
+    self.refreshControlDidChangeValue()
   }
 
   override func didReceiveMemoryWarning() {
@@ -44,14 +50,22 @@ final class AppListViewController: UIViewController {
   // MARK: Other Functions
 
   func loadAppList() {
-//    self.apps = App.sampleAppList()
-//    self.tableView.reloadData()
+    guard !self.isLoading else { return }
+    self.isLoading = true
     
     ApiService.appList { [weak self] appArray in
       guard let `self` = self else { return }
+      
+      self.isLoading = false
+      self.refreshControl.endRefreshing()
+      
       self.apps = appArray
       self.tableView.reloadData()
     }
+  }
+  
+  fileprivate dynamic func refreshControlDidChangeValue() {
+    self.loadAppList()
   }
 }
 
