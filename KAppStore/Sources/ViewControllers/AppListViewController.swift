@@ -44,8 +44,8 @@ final class AppListViewController: UIViewController {
   // MARK: Other Functions
 
   func loadAppList() {
-    self.apps = App.sampleAppList()
-    self.tableView.reloadData()
+//    self.apps = App.sampleAppList()
+//    self.tableView.reloadData()
     
     ApiService.appList { [weak self] appArray in
       guard let `self` = self else { return }

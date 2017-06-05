@@ -15,6 +15,13 @@ class ScreenshotImageCell: UICollectionViewCell {
   @IBOutlet weak var imageView: CustomImageView!
   
   
+  // MARK: View Life Cycle
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+  }
+  
+  
   // MARK: Configuring
   
   func configure(imageURL: String) {

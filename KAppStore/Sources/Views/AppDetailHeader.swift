@@ -30,7 +30,7 @@ class AppDetailHeader: UICollectionReusableView {
   override func awakeFromNib() {
     super.awakeFromNib()
     
-    self.appImageView.backgroundColor = .red
+    self.appImageView.backgroundColor = .lightGray
     self.appImageView.layer.cornerRadius = 16
     self.appImageView.contentMode = .scaleAspectFill
     self.appImageView.layer.masksToBounds = true

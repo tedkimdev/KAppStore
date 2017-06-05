@@ -14,6 +14,7 @@ class AppDetailFooter: UICollectionReusableView {
   
   @IBOutlet weak var artistNameLabel: UILabel!
   
+  
   // MARK: - View Life Cycle
   
   override func awakeFromNib() {

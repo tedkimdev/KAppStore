@@ -16,9 +16,9 @@ class AppDetailViewController: UICollectionViewController {
     items:[.screenshot,
            .content(title: "description"),
            .content(title: "releaseNotes"),
-           .information,
-           .selectable,
-           .artistName, 
+//           .information,
+//           .selectable,
+//           .artistName, 
           ]
   )
   
@@ -118,17 +118,17 @@ class AppDetailViewController: UICollectionViewController {
       
     case .information:
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contentCellId", for: indexPath)
-      cell.backgroundColor = .blue
+//      cell.backgroundColor = .blue
       return cell
       
     case .selectable:
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contentCellId", for: indexPath)
-      cell.backgroundColor = .green
+//      cell.backgroundColor = .green
       return cell
       
     case .artistName:
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contentCellId", for: indexPath)
-      cell.backgroundColor = .blue
+//      cell.backgroundColor = .blue
       return cell
     }
     
@@ -151,10 +151,18 @@ extension AppDetailViewController: UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     
+//    print(self.view.frame.width)
+//    print(self.collectionView?.frame.width ?? 0)
+    
     switch self.cellTypes.items[indexPath.item] {
-    case .content:
-      // TODO: 텍스트 높이만큼 높이 조정
-      return CGSize(width: self.view.frame.width, height: 360)
+    case .content(let title):
+      var height: CGFloat = 0
+      if title == "description" {
+        height = ContentViewCell.height(width: self.view.frame.width, description: self.appDetailInfo?.description)
+      } else if title == "releaseNotes" {
+        height = ContentViewCell.height(width: self.view.frame.width, description: self.appDetailInfo?.releaseNotes)
+      }
+      return CGSize(width: self.view.frame.width, height: height)
       
     default:
       return CGSize(width: self.view.frame.width, height: 360)
