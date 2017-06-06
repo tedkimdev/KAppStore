@@ -10,9 +10,17 @@ import UIKit
 
 final class AppListViewController: UIViewController {
   
+  // MARK: Constans
+  
+  struct Metric {
+    static let apiResultLimit = 100
+  }
+  
+  
   // MARK: Properties
   
   var isLoading: Bool = false
+  var genre: Genre = .finance
   var apps: [App] = [App]()
   
   
@@ -43,7 +51,6 @@ final class AppListViewController: UIViewController {
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
   
   
@@ -52,8 +59,7 @@ final class AppListViewController: UIViewController {
   func loadAppList() {
     guard !self.isLoading else { return }
     self.isLoading = true
-    
-    ApiService.appList { [weak self] response in
+    ApiService.appList(limit: Metric.apiResultLimit, genre: self.genre.rawValue) { [weak self] response in
       guard let `self` = self else { return }
       self.isLoading = false
       self.refreshControl.endRefreshing()

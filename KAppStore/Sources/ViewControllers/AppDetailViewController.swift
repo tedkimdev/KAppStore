@@ -18,6 +18,7 @@ class AppDetailViewController: UICollectionViewController {
     static let selectableCellHeight = CGFloat(40)
   }
   
+  
   // MARK: Properties
   
   fileprivate var cellTypes: CellType = CellType(
@@ -36,19 +37,28 @@ class AppDetailViewController: UICollectionViewController {
   var appId: String? {
     didSet {
       guard let appId = self.appId else { return }
-      ApiService.appDetail(appId: appId) { [weak self] appDetailInfo in
+      
+      ApiService.appDetail(appId: appId, country: "kr") { [weak self] response in
         guard let `self` = self else { return }
-        self.appDetailInfo = appDetailInfo
+        
+        switch response {
+        case .success(let appDetailInfo):
+          self.appDetailInfo = appDetailInfo
+          
+        case .failure(let error):
+          print("Failed to load app detail infomation:", error)
+        }
       }
+      
     }
   }
   
   var appDetailInfo: AppDetailInfo? {
     didSet {
-//      print(self.appDetailInfo ?? "no app detail info")
       self.collectionView?.reloadData()
     }
   }
+  
   
   // MARK: Initializing
   
@@ -65,7 +75,6 @@ class AppDetailViewController: UICollectionViewController {
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
   
   

@@ -10,13 +10,26 @@ import UIKit
 
 final class AppListTableViewCell: UITableViewCell {
 
+  // MARK: Constants
+  
+  struct Metric {
+    static let appImageViewCornerRadius = CGFloat(8)
+    
+    static let buttonBorderWidth = CGFloat(0.5)
+    static let buttonCornerRadius = CGFloat(5)
+  }
+  
+  struct Color {
+    static let downloadButton = UIColor.rgb(red: 0, green: 129, blue: 250).cgColor
+  }
+  
+  
   // MARK: UI
   
   @IBOutlet weak var numberLabel: UILabel!
   @IBOutlet weak var appImageView: CustomImageView!
   @IBOutlet weak var appNameLabel: UILabel!
   @IBOutlet weak var categoryLabel: UILabel!
-  @IBOutlet weak var reviewCountLabel: UILabel!
   @IBOutlet weak var downloadButton: UIButton!
   
   
@@ -26,13 +39,13 @@ final class AppListTableViewCell: UITableViewCell {
     super.awakeFromNib()
     
     self.appImageView.backgroundColor = .clear
-    self.appImageView.layer.cornerRadius = 8
+    self.appImageView.layer.cornerRadius = Metric.appImageViewCornerRadius
     self.appImageView.contentMode = .scaleAspectFill
     self.appImageView.layer.masksToBounds = true
     
-    self.downloadButton.layer.borderWidth = 0.5
-    self.downloadButton.layer.borderColor = UIColor.rgb(red: 0, green: 129, blue: 250).cgColor
-    self.downloadButton.layer.cornerRadius = 5
+    self.downloadButton.layer.borderWidth = Metric.buttonBorderWidth
+    self.downloadButton.layer.borderColor = Color.downloadButton
+    self.downloadButton.layer.cornerRadius = Metric.buttonCornerRadius
   }
   
   

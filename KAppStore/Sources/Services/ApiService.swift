@@ -18,13 +18,12 @@ struct ApiService {
   // TODO: Paging..
   
   /// 금융 카테고리 무료 앱 순위 가져오기
-  static func appList(completion: @escaping (DataResponse<[App]>) -> () ) {
-    let urlString = "https://itunes.apple.com/kr/rss/topfreeapplications/limit=50/genre=6015/json"
+  static func appList(limit: Int, genre: Int, completion: @escaping (DataResponse<[App]>) -> () ) {
+    let urlString = "https://itunes.apple.com/kr/rss/topfreeapplications/limit=\(limit)/genre=\(genre)/json"
     guard let url = URL(string: urlString) else { return }
     URLSession.shared.dataTask(with: url) { data, response, error in
       
       if let error = error {
-        print("Failed to load app list: ", error)
         return completion(DataResponse.failure(error))
       }
       
@@ -48,15 +47,14 @@ struct ApiService {
         }
         
       } catch let jsonError {
-        print(jsonError)
         completion(DataResponse.failure(jsonError))
       }
     }.resume()
   }
 
   /// 앱 상세 정보 가져오기
-  static func appDetail(appId: String, completion: @escaping (AppDetailInfo) -> ()) {
-    let urlString = "https://itunes.apple.com/lookup?id=\(appId)&country=kr"
+  static func appDetail(appId: String, country: String, completion: @escaping (DataResponse<AppDetailInfo>) -> ()) {
+    let urlString = "https://itunes.apple.com/lookup?id=\(appId)&country=\(country)"
     guard let url = URL(string: urlString) else { return }
     
     // location (다운로드한 파일이 저장될 임시 파일 경로)
@@ -65,8 +63,7 @@ struct ApiService {
     URLSession.shared.downloadTask(with: url) { location, response, error in
      
       if let error = error {
-        print("Failed to load app detail information: ", error)
-        return
+        return completion(DataResponse.failure(error))
       }
       
       do {
@@ -78,13 +75,12 @@ struct ApiService {
           let results = jsonDictionary["results"] as? [[String: Any]],
           let dictionary = results.first else { return }
         
-//        print(dictionary)
         DispatchQueue.main.async {
-          completion(AppDetailInfo(dictionary: dictionary))
+          completion(DataResponse.success(AppDetailInfo(dictionary: dictionary)))
         }
         
       } catch let jsonError {
-        print(jsonError)
+        completion(DataResponse.failure(jsonError))
       }
     }.resume()
   }

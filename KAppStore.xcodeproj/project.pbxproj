@@ -28,6 +28,7 @@
 		BD0F16DC1EE6E304006FDF3F /* SelectableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F16D21EE6E304006FDF3F /* SelectableCell.swift */; };
 		BD0F16DD1EE6E304006FDF3F /* AppListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F16D41EE6E304006FDF3F /* AppListTableViewCell.swift */; };
 		BD0F16DE1EE6E304006FDF3F /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F16D51EE6E304006FDF3F /* CellType.swift */; };
+		BD0F16E01EE6FEF7006FDF3F /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F16DF1EE6FEF7006FDF3F /* Genre.swift */; };
 		BDD481F11EE2A770000D5C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD481E51EE2A770000D5C12 /* Assets.xcassets */; };
 		BDD481F21EE2A770000D5C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD481E61EE2A770000D5C12 /* LaunchScreen.storyboard */; };
 		BDD481F31EE2A770000D5C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD481E81EE2A770000D5C12 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		BD0F16D21EE6E304006FDF3F /* SelectableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectableCell.swift; sourceTree = "<group>"; };
 		BD0F16D41EE6E304006FDF3F /* AppListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppListTableViewCell.swift; sourceTree = "<group>"; };
 		BD0F16D51EE6E304006FDF3F /* CellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellType.swift; sourceTree = "<group>"; };
+		BD0F16DF1EE6FEF7006FDF3F /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		BDD481C61EE24893000D5C12 /* KAppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD481E51EE2A770000D5C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDD481E71EE2A770000D5C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				BD0F169F1EE6E289006FDF3F /* ApiService.swift */,
+				BD0F16DF1EE6FEF7006FDF3F /* Genre.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				BD0F16B31EE6E289006FDF3F /* AppDelegate.swift in Sources */,
 				BD0F16DD1EE6E304006FDF3F /* AppListTableViewCell.swift in Sources */,
 				BD0F16BA1EE6E289006FDF3F /* CustomImageView.swift in Sources */,
+				BD0F16E01EE6FEF7006FDF3F /* Genre.swift in Sources */,
 				BD0F16DC1EE6E304006FDF3F /* SelectableCell.swift in Sources */,
 				BD0F16DE1EE6E304006FDF3F /* CellType.swift in Sources */,
 				BD0F16BE1EE6E289006FDF3F /* AppListViewController.swift in Sources */,
