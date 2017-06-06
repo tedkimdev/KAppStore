@@ -53,20 +53,26 @@ final class AppListViewController: UIViewController {
     guard !self.isLoading else { return }
     self.isLoading = true
     
-    ApiService.appList { [weak self] appArray in
+    ApiService.appList { [weak self] response in
       guard let `self` = self else { return }
-      
       self.isLoading = false
       self.refreshControl.endRefreshing()
       
-      self.apps = appArray
-      self.tableView.reloadData()
+      switch response {
+      case .success(let apps):
+        self.apps = apps
+        self.tableView.reloadData()
+        
+      case .failure(let error):
+        print("Failed to load app lists: ", error)
+      }
     }
   }
   
   fileprivate dynamic func refreshControlDidChangeValue() {
     self.loadAppList()
   }
+  
 }
 
 

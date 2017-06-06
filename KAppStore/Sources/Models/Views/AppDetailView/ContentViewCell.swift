@@ -1,0 +1,76 @@
+//
+//  ContentViewCell.swift
+//  KAppStore
+//
+//  Created by aney on 2017. 6. 5..
+//  Copyright © 2017년 Taedong Kim. All rights reserved.
+//
+
+import UIKit
+
+class ContentViewCell: UICollectionViewCell {
+  
+  // MARK: Constants
+  
+  struct Metric {
+    static let titleLabelHeight = CGFloat(20)
+    static let titlaLabelTop = CGFloat(6)
+    static let titlaLabelBottom = CGFloat(6)
+  }
+  
+  struct Font {
+    static let contentLabel = UIFont.systemFont(ofSize: 12)
+  }
+  
+  
+  // MARK: Properties
+  
+  var isTrimmed: Bool = true {
+    didSet {
+      // TODO: ContentLabel 더보기
+    }
+  }
+  
+  
+  // MARK: UI
+  
+  @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet weak var contentLabel: UILabel!
+  
+  
+  // MARK: View Life Cycle
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+  }
+  
+  
+  // MARK: Configuring
+  
+  func configure(title: String, content: String) {
+    self.titleLabel.text = title
+    self.contentLabel.text = content
+    self.contentLabel.sizeToFit()
+    self.setNeedsLayout()
+  }
+  
+  
+  // MARK: height
+  
+  class func height(width: CGFloat, description: String?) -> CGFloat {
+    let height: CGFloat = Metric.titleLabelHeight + Metric.titlaLabelTop + Metric.titlaLabelBottom
+    let descriptionHeight = description?.size(width: width, font: Font.contentLabel).height ?? 0
+    let releaseDateHeight = ceil(Font.contentLabel.lineHeight * 3)
+    let minimumHeight = ceil(Font.contentLabel.lineHeight * 1)
+    return height + releaseDateHeight + max(descriptionHeight, minimumHeight) + 20 // cell 내부 insets
+  }
+  
+  
+  // MARK: Layout
+  
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    self.contentLabel.sizeToFit()
+  }
+  
+}

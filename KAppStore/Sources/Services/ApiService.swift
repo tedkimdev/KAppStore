@@ -8,19 +8,24 @@
 
 import Foundation
 
+enum DataResponse<T> {
+  case success(T)
+  case failure(Error)
+}
+
 struct ApiService {
   
   // TODO: Paging..
   
   /// 금융 카테고리 무료 앱 순위 가져오기
-  static func appList(completion: @escaping ([App]) -> ()) {
+  static func appList(completion: @escaping (DataResponse<[App]>) -> () ) {
     let urlString = "https://itunes.apple.com/kr/rss/topfreeapplications/limit=50/genre=6015/json"
     guard let url = URL(string: urlString) else { return }
     URLSession.shared.dataTask(with: url) { data, response, error in
       
       if let error = error {
         print("Failed to load app list: ", error)
-        return
+        return completion(DataResponse.failure(error))
       }
       
       do {
@@ -39,15 +44,16 @@ struct ApiService {
         }
         
         DispatchQueue.main.async {
-          completion(apps)
+          completion(DataResponse.success(apps))
         }
         
       } catch let jsonError {
         print(jsonError)
+        completion(DataResponse.failure(jsonError))
       }
     }.resume()
   }
-  
+
   /// 앱 상세 정보 가져오기
   static func appDetail(appId: String, completion: @escaping (AppDetailInfo) -> ()) {
     let urlString = "https://itunes.apple.com/lookup?id=\(appId)&country=kr"

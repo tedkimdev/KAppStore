@@ -75,4 +75,5 @@ struct AppDetailInfo {
     
     return dictionary
   }
+  
 }

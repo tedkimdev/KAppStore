@@ -10,6 +10,14 @@ import UIKit
 
 class AppDetailViewController: UICollectionViewController {
   
+  // MARK: Constants
+  
+  struct Metric {
+    static let headerHeight = CGFloat(180)
+    static let footerHeight = CGFloat(40)
+    static let selectableCellHeight = CGFloat(40)
+  }
+  
   // MARK: Properties
   
   fileprivate var cellTypes: CellType = CellType(
@@ -147,11 +155,11 @@ class AppDetailViewController: UICollectionViewController {
 extension AppDetailViewController: UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-    return CGSize(width: self.view.frame.width, height: 180)
+    return CGSize(width: self.view.frame.width, height: Metric.headerHeight)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-    return CGSize(width: self.view.frame.width, height: 40)
+    return CGSize(width: self.view.frame.width, height: Metric.footerHeight)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -167,7 +175,7 @@ extension AppDetailViewController: UICollectionViewDelegateFlowLayout {
       return CGSize(width: self.view.frame.width, height: height)
       
     case .selectable:
-      return CGSize(width: self.view.frame.width, height: 40)
+      return CGSize(width: self.view.frame.width, height: Metric.selectableCellHeight)
     
     case .information:
       if let dictionary = self.appDetailInfo?.informationCellData(),
