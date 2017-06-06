@@ -36,7 +36,7 @@ final class AppListViewController: UIViewController {
     super.viewDidLoad()
     
     self.navigationItem.title = "금융"
-    self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "카테고리", style: .plain, target: self, action: nil)
+    self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "카테고리", style: .plain, target: self, action: #selector(leftBarButtonDidTap))
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icon-card"), style: .plain, target: self, action: nil)
     
     self.tableView.dataSource = self
@@ -77,6 +77,10 @@ final class AppListViewController: UIViewController {
   
   fileprivate dynamic func refreshControlDidChangeValue() {
     self.loadAppList()
+  }
+  
+  fileprivate dynamic func leftBarButtonDidTap() {
+    // TODO: 장르 선택 뷰 컨트롤러 present
   }
   
 }
