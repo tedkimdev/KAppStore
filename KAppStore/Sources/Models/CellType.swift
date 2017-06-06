@@ -14,6 +14,6 @@ enum CellItemType {
   case screenshot
   case content(title: String)
   case information
-  case selectable
+  case selectable(title: String)
   case artistName
 }

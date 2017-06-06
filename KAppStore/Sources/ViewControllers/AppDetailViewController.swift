@@ -13,12 +13,16 @@ class AppDetailViewController: UICollectionViewController {
   // MARK: Properties
   
   fileprivate var cellTypes: CellType = CellType(
-    items:[.screenshot,
-           .content(title: "description"),
-           .content(title: "releaseNotes"),
-//           .information,
-//           .selectable,
-          ]
+    items: [
+      .screenshot,
+      .content(title: "description"),
+      .content(title: "releaseNotes"),
+      .information,
+      .selectable(title: "버전 업데이트 기록"),
+      .selectable(title: "개발자 웹사이트"),
+      .selectable(title: "개인정보 취급방침"),
+      .selectable(title: "개발자 앱"),
+      ]
   )
   
   var appId: String? {
@@ -33,11 +37,10 @@ class AppDetailViewController: UICollectionViewController {
   
   var appDetailInfo: AppDetailInfo? {
     didSet {
-      print(self.appDetailInfo ?? "no app detail info")
+//      print(self.appDetailInfo ?? "no app detail info")
       self.collectionView?.reloadData()
     }
   }
-  
   
   // MARK: Initializing
   
@@ -98,7 +101,7 @@ class AppDetailViewController: UICollectionViewController {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "screenshotsCellId", for: indexPath) as! ScreenshotsCell
       
       if let screenshotURLs = self.appDetailInfo?.screenshotURLs {
-//        print(screenshotURLs)
+        
         cell.configure(URLs: screenshotURLs)
       }
       return cell
@@ -112,25 +115,26 @@ class AppDetailViewController: UICollectionViewController {
       } else if let releaseNotes = self.appDetailInfo?.releaseNotes,
         let releaseDate = self.appDetailInfo?.releaseDate,
         title == "releaseNotes" {
-        
-        cell.configure(title: "새로운 기능", content: releaseDate + "\n\n" + releaseNotes)
+        cell.configure(title: "새로운 기능", content: Date.convertISODateStringToDate(string: releaseDate) + "\n\n" + releaseNotes)
       }
       return cell
       
     case .information:
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contentCellId", for: indexPath)
-//      cell.backgroundColor = .blue
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "informationCellId", for: indexPath) as! InfomationCell
+      
+      if let dictionary = self.appDetailInfo?.informationCellData() {
+        cell.configure(title: "정보", dictionary: dictionary)
+      }
+      
       return cell
       
-    case .selectable:
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contentCellId", for: indexPath)
-//      cell.backgroundColor = .green
+    case .selectable(let title):
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "selectableCellId", for: indexPath) as! SelectableCell
+      cell.configure(title: title)
       return cell
       
-    case .artistName:
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contentCellId", for: indexPath)
-//      cell.backgroundColor = .blue
-      return cell
+    default:
+      return UICollectionViewCell()
     }
     
   }
@@ -152,9 +156,6 @@ extension AppDetailViewController: UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     
-//    print(self.view.frame.width)
-//    print(self.collectionView?.frame.width ?? 0)
-    
     switch self.cellTypes.items[indexPath.item] {
     case .content(let title):
       var height: CGFloat = 0
@@ -165,9 +166,26 @@ extension AppDetailViewController: UICollectionViewDelegateFlowLayout {
       }
       return CGSize(width: self.view.frame.width, height: height)
       
+    case .selectable:
+      return CGSize(width: self.view.frame.width, height: 40)
+    
+    case .information:
+      if let dictionary = self.appDetailInfo?.informationCellData(),
+        let key = dictionary.first?.key
+        {
+          let height = InfomationCell.height(width: self.view.frame.width, description: key)
+          return CGSize(width: self.view.frame.width, height: height)
+      }
+      let height = InfomationCell.height(width: self.view.frame.width, description: "")
+      return CGSize(width: self.view.frame.width, height: height)
+      
     default:
       return CGSize(width: self.view.frame.width, height: 360)
     }
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    return 0.5
   }
   
 }

@@ -77,6 +77,11 @@ extension ScreenshotsCell: UICollectionViewDataSource {
 
 extension ScreenshotsCell: UICollectionViewDelegate {
   
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    print("\(indexPath.item) image selected")
+    // TODO: popup image view controller
+  }
+  
 }
 
 

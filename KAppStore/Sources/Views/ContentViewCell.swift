@@ -18,6 +18,15 @@ class ContentViewCell: UICollectionViewCell {
   }
   
   
+  // MARK: Properties
+  // TODO: ContentLabel 더보기
+  var isTrimmed: Bool = true {
+    didSet {
+      
+    }
+  }
+  
+  
   // MARK: UI
   
   @IBOutlet weak var titleLabel: UILabel!
@@ -46,14 +55,14 @@ class ContentViewCell: UICollectionViewCell {
   class func height(width: CGFloat, description: String?) -> CGFloat {
     let height: CGFloat = 20 + 6 + 6 + 1
     let descriptionHeight = description?.size(width: width, font: Font.contentLabel).height ?? 0
-    let minimumHeight = ceil(Font.contentLabel.lineHeight * 3) // 날짜 + 노트
-    return height + max(descriptionHeight, minimumHeight) + 20 // cell 내부 insets
+    let releaseDateHeight = ceil(Font.contentLabel.lineHeight * 3)
+    let minimumHeight = ceil(Font.contentLabel.lineHeight * 1)
+    return height + releaseDateHeight + max(descriptionHeight, minimumHeight) + 20 // cell 내부 insets
   }
   
   override func layoutSubviews() {
     super.layoutSubviews()
     self.contentLabel.sizeToFit()
   }
-  
   
 }
