@@ -36,11 +36,9 @@ struct ApiService {
           let feed = result["feed"] as? [String: Any],
           let entry = feed["entry"] as? [[String: Any]] else { return }
         
-        var apps = [App]()
-        for dictionary in entry {
-          let app = App(dictionary: dictionary)
-          apps.append(app)
-        }
+        let apps = entry.map({ dictionary -> App in
+          return App(dictionary: dictionary)
+        })
         
         DispatchQueue.main.async {
           completion(DataResponse.success(apps))
